@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { CheckLoginSession } from "./js/Loginsession";
+import { CheckLoginSession } from "../js/Loginsession";
 
 
 const Community = () =>{
