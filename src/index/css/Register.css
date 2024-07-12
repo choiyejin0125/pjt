@@ -1,0 +1,24 @@
+.Register{
+    width: 30%;
+    height: 40%;
+
+    margin: 0 auto;
+    display: inline-block;
+
+}
+
+.Register input{
+    font-size: 100%;
+}
+
+.Login{
+    width: 30%;
+    height: 40%;
+
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.Login input{
+    font-size: 100%;
+}
