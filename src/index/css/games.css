@@ -1,0 +1,81 @@
+#game_wrap{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    border: 1px solid #000;
+}
+
+#game_wrap div.game_img{
+    width: 80%;
+    height: 300px;
+
+    margin: 0 auto;
+    margin-top: 20px;
+
+    border: 1px solid #000;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+    overflow: hidden;
+}
+li{
+    display: inline-block;
+    margin-right: 10px;
+}
+#game_wrap div.game_banner div.arrow{
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 10px;
+
+}
+
+#game_wrap div.game_banner{
+    width: auto;
+    height: 10%;
+    border: 1px solid #000;
+
+    margin: 10px auto;
+    text-align: center;
+}
+
+
+#game_wrap div.lower_game {
+    width: 100%;
+    height: 600px;
+    padding: 30px;
+    border: 1px solid #000;
+    position: relative; 
+    box-sizing: border-box; 
+}
+
+#game_wrap div.lower_game div.community {
+    width: 30%;
+    height: 90%;
+    display: inline-block;
+    vertical-align: top; 
+    border: 1px solid #F00;
+}
+
+#game_wrap div.lower_game div.game_new_info {
+    width: 65%;
+    height: 40%;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    margin-left: 20px;
+    border: 1px solid #F00;
+}
+
+#game_wrap div.lower_game div.game_info {
+    width: 65%;
+    height: 40%;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    margin-left: 20px;
+    border: 1px solid #F00;
+}

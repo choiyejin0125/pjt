@@ -1,24 +1,151 @@
-.Register{
-    width: 30%;
-    height: 40%;
-
+/*register start*/
+#wrap div.Register {
     margin: 0 auto;
-    display: inline-block;
-
 }
 
-.Register input{
-    font-size: 100%;
-}
-
-.Login{
-    width: 30%;
-    height: 40%;
-
+#wrap div.Register div.register_box {
+    height: 555px;
+    width: 450px;
     margin: 0 auto;
-    display: inline-block;
+    text-align: center;
+    padding-top: 70px;
+    
 }
 
-.Login input{
-    font-size: 100%;
+#wrap div.Register div.register_box h2 {
+    border-bottom: 2px solid #000000;
+    width: 350px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
 }
+
+#wrap div.Register div.register_box > h5 {
+    width: 300px;
+    text-align: left;
+    margin: auto;
+    margin-top: 9px;
+    margin-bottom: 3px;
+}
+
+#wrap div.Register div.register_box input {
+    height: 35px;
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid #cdcdcd;
+    padding-left: 6px;
+
+}
+
+
+#reg_btn {
+    height: 38px;
+    width: 310px;
+    margin-top: 13px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+} 
+
+
+#wrap div.Register div.register_box > div {
+    position: relative;
+}
+
+#wrap div.Register div.register_box > div > div.show_btn {
+    position: absolute;
+    top: 6px;
+    right: 80px;
+}
+
+/*register end*/
+
+/*login start*/
+
+#wrap div.Login {
+    padding-top: 150px;
+    margin: 0 auto;
+}
+
+#wrap div.Login div.login_box {
+    height: 555px;
+    width: 450px;
+    margin: 0 auto;
+    text-align: center;    
+}
+
+#wrap div.Login div.login_box > h5 {
+    width: 300px;
+    text-align: left;
+    margin: auto;
+    margin-top: 9px;
+    margin-bottom: 3px;
+
+}
+
+#wrap div.Login div.login_box input {
+    height: 35px;
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid #cdcdcd;
+    padding-left: 6px;
+}
+
+#log_btn {
+    height: 38px;
+    width: 310px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+#wrap div.Login div.login_box button.reg_btn {
+    height: 38px;
+    width: 310px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #cdcdcd;
+    background-color: #fff;
+    cursor: pointer;
+
+}
+
+/*login end*/
+
+/*modal start*/
+
+#wrap div.modal_container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.7);
+}
+#wrap div.modal_content {
+    background-color: #fff;
+    width: 450px;
+    height: 555px;
+    position: relative;
+    
+}
+
+#wrap div.modal_content button.modal_close_btn {
+    position: absolute;
+    top: 20px;;
+    right: 20px;
+    font-size: 2em;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+
+
+}
+/*model end*/

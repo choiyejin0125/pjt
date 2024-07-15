@@ -1,8 +1,17 @@
 import React, { useState, useRef } from "react";
 import { DBconnection } from "../js/IndexedDB";
-// import "./css/Register.css";
+import "../css/Register.css";
 import { getLoginSession } from "../js/Loginsession";
 
+
+const RegisterModal = () => {
+
+    return(
+        <>
+            
+        </>
+    );
+}
 
 const Validcheck = (props) => { // 유효성 검사
     const nameregex = /^[a-zA-Z가-힣\s]+$/; // 정규식 표현(영문, 한글)
@@ -44,6 +53,9 @@ const Register = () =>{
 
     //usestate( 비밀번호 공개 버튼)
     const [isHoldPwBtn, setisHoldPwBtn] = useState(false);
+
+    const [regModalOpen, setRegModalOpen] = useState(false);
+    const modalBackground = useRef();
 
     //핸들러
     const holdPwBtnShowHandler = () =>{ // 비밀번호 공개 핸들러
@@ -105,19 +117,61 @@ const Register = () =>{
     
     return(
         <>
-        <div className="Register">
-            ID: <input type="text" ref={uid} id="u_id"  placeholder="Place your ID"/><br />
-            Password: <input type={isHoldPwBtn ? 'text' : 'password'} ref={upw} id="u_pw" placeholder="Place your PW"/><button className="pwshow-btn" onClick={holdPwBtnShowHandler}>show</button><br />
-            Email:<input type="text" ref={umail} id="u_mail" placeholder="Place your EMAIL"/><br />
-            Name: <input type="text" ref={uname} id="u_name" placeholder="Place your NAME"/><br />
-            <button id = "reg_btn" onClick={regBtnClickHandler}>Register</button>
+        <div className="Login">
+            <div className="login_box">
+                <h2>로그인</h2>
+                <h5>아이디</h5>
+                <input type="text" id="log_id" ref={logid}  placeholder="Place your ID"/>
+                <br />
+                <h5>비밀번호</h5>
+                <input type='text' id="log_pw" ref={logpw} placeholder="Place your PW"/>
+                <br />
+                <button id = "log_btn" onClick={logBtnClickHandler}>로그인</button>
+                <button className ={'reg_btn'}  onClick={() => setRegModalOpen(true)}>회원가입</button>
+                {
+                regModalOpen &&
+                <div className={'modal_container'} ref={modalBackground} onClick={e => {
+                    if (e.target === modalBackground.current) {
+                        setRegModalOpen(false);
+                    }
+                }}>
+                    <div className={'modal_content'}>
+
+                    <div className="Register">
+                        <div className="register_box">
+                            <h2>회원가입</h2>
+                            <h5>이름</h5>
+                            <input type="text" ref={uname} id="u_name" placeholder="Place your NAME"/>
+                            <br />
+                            <h5>아이디</h5>
+                            <input type="text" ref={uid} id="u_id"  placeholder="Place your ID"/>
+                            <br />
+                            <h5>비밀번호</h5>
+                            <div>
+                                <input type={isHoldPwBtn ? 'text' : 'password'} ref={upw} id="u_pw" placeholder="Place your PW"/>
+                                <div className="show_btn">
+                                    <button className="pwshow-btn" onClick={holdPwBtnShowHandler}>show</button>
+                                </div>
+                            </div>
+                            <h5>이메일</h5>
+                            <input type="text" ref={umail} id="u_mail" placeholder="Place your EMAIL"/>
+                            <br />
+                            <button id="reg_btn" onClick={regBtnClickHandler}>가입하기</button>
+                            </div>
+                            <button className={'modal_close_btn'} onClick={() => setRegModalOpen(false)}>
+                            X
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+                }
+            </div>
         </div>
 
-        <div className="Login">
-        ID: <input type="text" id="log_id" ref={logid}  placeholder="Place your ID"/><br />
-        Password: <input type='text' id="log_pw" ref={logpw} placeholder="Place your PW"/><br />
-        <button id = "log_btn" onClick={logBtnClickHandler}>Login</button>
-        </div>
+        
+
+
         </>
 
     );

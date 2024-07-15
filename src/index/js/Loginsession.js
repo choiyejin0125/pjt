@@ -1,13 +1,18 @@
 import { jwtDecode } from "jwt-decode";
+import { nowDate } from "./util";
 
 
-const checkSessionExpired = (exptime) =>{
+export const tokenDecode = () =>{
+    const token = localStorage.getItem('token');
+    const decodetoken = jwtDecode(token);
+
+    return decodetoken;
 
 }
 
 export const getLoginSession = (userid) =>{
     const header = btoa(JSON.stringify({ alg: 'HS256', typ: 'JWT' }));
-    const payload = btoa(JSON.stringify({ username: userid, exp: Date.now() + 3600000 }));
+    const payload = btoa(JSON.stringify({ username: userid, exp: nowDate("common") + 3600 }));
     const signature = btoa('secret'); 
 
     const token = `${header}.${payload}.${signature}`;
@@ -33,8 +38,13 @@ export const CheckLoginSession = () =>{
     }
     else{
         try{
-            const decodetoken = jwtDecode(token);
-            console.log('디코딩 테스트: ', decodetoken);
+            const decodetoken = tokenDecode();
+
+            if (nowDate("common") > decodetoken.exp){
+                localStorage.removeItem('token');
+                alert("세션이 만료되었습니다. 다시 로그인해주세요");
+                window.location.href = "/register";
+            }
         } catch(error){
             console.error('토큰 디코딩 실패:', error);
         }

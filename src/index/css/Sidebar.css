@@ -16,6 +16,7 @@
     height: 50px;
     text-align: center;
     font-size: 1.2em;
+    cursor: pointer;
 
     padding-top: 10px;
     text-decoration: none;
@@ -34,7 +35,7 @@
 }
 .sidebar-footer a{
     display: block;
-    text-align: center;
+    text-align: right;
 }
 
 .sidebar.open{
@@ -42,3 +43,9 @@
 
 }
 
+
+.sidebar-footer h3{
+    font-weight: bold;
+    text-align: right;
+    color: #3a3a3a;
+}

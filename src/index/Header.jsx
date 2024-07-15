@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import  "./css/Sidebar.css";
 
 
@@ -28,7 +29,7 @@ const Header = () => {
           <a href="#none">로그아웃</a>
         </li>
         <li>
-          <a href="#none">정보수정</a>
+        <a href="#none">정보 수정</a>
         </li>
       </ul>
     </div>

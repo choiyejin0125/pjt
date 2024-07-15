@@ -1,7 +1,7 @@
 export const nowDate = (purpose) =>{
     switch(purpose){
         case "common":
-            return new Date();
+            return Math.floor(Date.now() / 1000);
         case "public":
                 const now = new Date();
                 const hours = now.getHours();

@@ -1,0 +1,36 @@
+.info-copyright{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: auto auto ;
+    
+}
+
+.info-text{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.info-text span{
+    color: #575757;
+    display: block;
+
+}
+
+
+
+.advertising{
+    width: 70%;
+    height: 70%;
+    border: 1px solid #000;
+
+    margin-top: 20px;
+
+
+}
+
+button:hover{
+    cursor: pointer;
+}

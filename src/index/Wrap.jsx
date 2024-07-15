@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -15,6 +15,7 @@ import NG from "./NG.jsx";
 
 import './css/index.css';
 import './css/common.css';
+import Modify from "./member/Modfy.jsx";
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -41,6 +42,8 @@ const Wrap = () => {
         <Route path="/community" element={<Layout><Community /></Layout>} />
         <Route path="/games" element={<Layout><Games /></Layout>} />
         <Route path="/employ" element={<Layout><Employ /></Layout>} />
+
+        <Route path="/modify" element={<Layout><Modify /></Layout>} />
         <Route path="/*" element={<Layout><NG /></Layout>} />
       </Routes>
     </BrowserRouter>

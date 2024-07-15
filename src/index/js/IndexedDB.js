@@ -44,6 +44,7 @@ const Login = async(logindata) =>{
         if (searchUid.id === logindata.id && searchUid.pw === logindata.pw){
             alert('로그인 성공!');
             getLoginSession(logindata.id);
+            window.location.href = "/";
         }
         else{
             alert('ID 또는 비밀번호가 틀립니다');
