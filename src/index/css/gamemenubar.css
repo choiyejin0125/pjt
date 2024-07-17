@@ -1,0 +1,18 @@
+#wrap div.game_menubar {
+    height: 130px;
+}
+#wrap div.game_menubar ul {
+    height: 65px;
+    display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+
+}
+
+#wrap div.game_menubar li {
+    width: 160px;
+    text-align: center;
+    
+
+}
