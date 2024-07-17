@@ -1,42 +1,13 @@
 #wrap {
     margin: 0 auto;
+    padding-top: 70px;
 }
 
-/* header start*/
-#wrap div.header {
-    width: 100%;
-    height: 90px;
-    padding-top: 20px;
-    position: relative;
-    position: fixed;
-    background-color: #fff;
-    opacity: .7;
-    z-index: 99;
-    
-}
-
-#wrap div.header div.logo {
-    text-align: center;
-}
-
-
-#wrap div.header ul.main_top {
-    position: absolute;
-    top:0;
-    right: 0;
-}
-
-#wrap div.header ul.main_top li {
-    float: left;
-    padding-left: 20px;
-}
-
-/* header end*/
 
 /* main start*/
 
 #wrap div.main div.banner img {
-    padding-top: 110px;
+    max-width: 100%;
 }
 #wrap div.main {
     text-align: center;
@@ -78,7 +49,7 @@
 
 #wrap div.content_1 > ul {
     margin: 80px auto;
-    width: 1400px;
+    width: 100%;
     height: 450px;
     display: flex;
     flex-direction: row;
@@ -101,7 +72,7 @@
 #wrap div.content_2 {
     margin: 0 auto;
     margin-top: 230px;
-    width: 1600px;
+    width: 100%;
     display: flex;
     justify-content: center;
     

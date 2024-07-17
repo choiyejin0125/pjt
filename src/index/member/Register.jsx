@@ -1,21 +1,14 @@
 import React, { useState, useRef } from "react";
-import { DBconnection } from "../js/IndexedDB";
+import { DBconnection, getAllUserId } from "../js/IndexedDB";
 import "../css/Register.css";
 import { getLoginSession } from "../js/Loginsession";
 
 
-const RegisterModal = () => {
-
-    return(
-        <>
-            
-        </>
-    );
-}
-
-const Validcheck = (props) => { // 유효성 검사
+export const Validcheck = (props) => { // 유효성 검사
     const nameregex = /^[a-zA-Z가-힣\s]+$/; // 정규식 표현(영문, 한글)
     const idregex = /^[a-zA-Z0-9가-힣\s]+$/; // 정규식 표현(영문, 한글, 숫자)
+
+
     if (Object.values(props).includes('')) {
         alert('모든 칸을 입력해주세요!');
     }
@@ -35,7 +28,6 @@ const Validcheck = (props) => { // 유효성 검사
         alert('이메일을 다시 확인해주세요');
     }
     else{
-        alert(`${props.name}님의 가입이 승인되었습니다`);
         return true;
     }
     return false;

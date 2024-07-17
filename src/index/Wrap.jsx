@@ -1,9 +1,8 @@
 import React from "react";
-import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 
 import Header from "./Header";
 import Footer from "./Footer";
-import Sidebar from "./Sidebar";
 import Home from "./Home";
 import Community from "./community/Community";
 import Company from "./company/Company";
@@ -16,15 +15,19 @@ import NG from "./NG.jsx";
 import './css/index.css';
 import './css/common.css';
 import Modify from "./member/Modfy.jsx";
+import Deleteinfo from "./member/Deleteinfo.jsx";
+import PIProcessingPolicy from "./textpage/PIProcessingPolicy.jsx";
+import TermsAndConditions from "./textpage/termsAndConditions.jsx";
 
 const Layout = ({ children }) => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
 
+
+
   return (
     <div id="wrap">
       <Header />
-      <Sidebar />
       {isHomePage ? <Home /> : children}
       <Footer />
     </div>
@@ -44,6 +47,9 @@ const Wrap = () => {
         <Route path="/employ" element={<Layout><Employ /></Layout>} />
 
         <Route path="/modify" element={<Layout><Modify /></Layout>} />
+        <Route path="/deleteinfo" element={<Layout><Deleteinfo /></Layout>} />
+        <Route path="/terms" element={<Layout><TermsAndConditions/></Layout>} /> 
+        <Route path="/policy" element={<Layout><PIProcessingPolicy /></Layout>} />
         <Route path="/*" element={<Layout><NG /></Layout>} />
       </Routes>
     </BrowserRouter>

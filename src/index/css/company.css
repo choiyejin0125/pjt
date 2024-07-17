@@ -1,0 +1,15 @@
+
+
+div.company-wrap{
+    background-color: #555;
+}
+
+
+div.company-container{
+    width: 1000px;
+    height: 600px;
+
+    margin: 0 auto;
+    border: 1px solid #F00;
+
+}

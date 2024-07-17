@@ -9,7 +9,7 @@ const Footer = () => {
         navi("/terms");
     }
     const publicHandler = () =>{
-        navi("/pips");
+        navi("/policy");
     }
     return(
         <div className="footer">

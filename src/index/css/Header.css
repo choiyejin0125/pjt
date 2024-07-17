@@ -1,0 +1,47 @@
+
+.topbar{
+    width: 100%;
+    height: 350px;
+
+    background-color: #bebebe;
+
+    position: fixed;
+    z-index: 100;
+    top: -280px;
+    transition: 0.3s;
+}
+ul.topbar-menu  li{
+    text-decoration: none;
+}
+
+ul.topbar-menu  li:hover{
+    background-color: #a3a3a3;
+}
+.topbar.open{
+    top: 0;
+}
+
+
+.topbar-footer{
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c4c4c443;
+}
+
+.topbar-footer > div.logo{
+    flex: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.topbar-footer > ul.main-top{
+    position: relative;
+    right: 0;
+}
+

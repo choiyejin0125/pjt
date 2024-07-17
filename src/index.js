@@ -9,7 +9,6 @@ import reportWebVitals from './reportWebVitals';
 // import Games from './index/games/Games';
 
 import Wrap from './index/Wrap';
-import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
