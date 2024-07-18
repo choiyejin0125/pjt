@@ -5,7 +5,7 @@ const Main = () => {
 
         <div className="main">
             <div className="banner">
-                <img src="./imgs/1920x960_banner.jpg" />
+                <img src="./imgs/1920x960_banner.png" />
             </div>
             <div className="arrow">
                 <div className="left_arrow">

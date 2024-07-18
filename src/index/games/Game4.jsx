@@ -76,7 +76,7 @@ const Contents = () => {
     return(
         <>
         <GameInfos 
-        src="..\imgs\gameimgs\game1/game2_img01.jpg"
+        src="..\imgs\gameimgs\game4/game4_img01.png"
         name="갓 오브 웨폰(God Of Weapons)"
 
         info_title="조르의 탑에 올라 세상의 마지막 빛을 되찾아야 하는 액션 로그라이크 갓 오브 웨폰에서 스릴 넘치는 여정을 시작하세요."

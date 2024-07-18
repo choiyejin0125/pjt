@@ -76,7 +76,7 @@ const Contents = () => {
     return(
         <>
         <GameInfos 
-        src="..\imgs\gameimgs\game1/game2_img01.jpg"
+        src="..\imgs\gameimgs\game3/game3_img01.png"
         name="환세취호전 플러스 (GENSEISUIKODEN PLUS)"
 
         info_title="으르렁거리는 철권, 흩날리는 땀방울 심장을 뒤흔드는 열혈 권법 RPG가 다시 한번 막을 연다!"

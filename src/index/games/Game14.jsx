@@ -1,6 +1,5 @@
-import React from "react";
-import Games from "./Games";
 import "../css/games.css";
+import Games from "./Games";
 
 const GameInfos = (props) => {
     return(
@@ -8,12 +7,15 @@ const GameInfos = (props) => {
         <div className="main_img">
             <img src={props.src} alt="thum" />
         </div>
+        <h2>{props.name}</h2>
         <div className="lower_game">
             <div className="game_info">
-                <h2 className="game_story">스토리</h2>
-                <p>{props.info_title}</p>
+                <div>
+                    <h2 className="game_story">스토리</h2>
+                    <p className="title">{props.info_title}</p>
+                </div>
                 
-
+                <div>
                 <h2 className="game_infos">게임 정보</h2>
                 <div className="game_infos">
                     <div>
@@ -22,6 +24,7 @@ const GameInfos = (props) => {
                         <p>배급사</p>
                         <p>지원언어</p>
                         <p>이용등급</p>
+                        <p>출시일</p>
                     </div>
                     <div>
                         <p>{props.genre}</p>
@@ -29,11 +32,14 @@ const GameInfos = (props) => {
                         <p>{props.distributor}</p>
                         <p>{props.language}</p>
                         <p>{props.use}</p>
+                        <p>{props.date}</p>
                     </div>
                 </div>
             </div>
+        </div>
 
             <div className="game_new_info">
+                <div>
             <h2 className="pressrelease">보도자료</h2>
                 <ul>
                     <li>
@@ -49,6 +55,7 @@ const GameInfos = (props) => {
                         <a href="#none">{props.newinfo_txt4}</a>
                     </li>
                 </ul>
+                </div>
             </div> 
 
             <div className="community">
@@ -69,17 +76,17 @@ const Contents = () => {
     return(
         <>
         <GameInfos 
-        src="../imgs/1200x800.png"
+        src="..\imgs\gameimgs\game14/game14_img01.jpg"
+        name="샴블즈 (Shambles)"
 
-        info_title="빛이 어둠을 영혼검에 봉인한 후 아곤 제국의 통치 아래 엘레원 대륙은 평화를 되찾는 듯했다.
-                하지만 아곤 제국의 여러 가문들은 왕좌에 오르기 위해 전쟁을 벌였고… 엘레원 대륙은 피로 물들었다.
-                라미엘의 신탁을 받은 영웅들은 어둠의 군대를 무찌르고 엘레온 대륙의 새로운 역사를 위해 어둠과 맞서 싸우기 시작했다."
+        info_title="당신이 알던 세상은 이미 멸망했다... 벙커에서 나온 탐험가가 되어, 500년의 시간이 흐른 새로운 세상을 탐험하고, 다양한 이야기 그리고 흥미로운 사건들을 직접 마주해보세요. 당신은 세상을 다시 파멸로 이끌 수도 혹은 평화롭게 할 수도 있습니다. 모든 것은 당신의 선택에 달렸습니다."
 
-        genre="RPG"
-        originator="WAYCODER"
-        distributor="DAEWON MEDIA"
-        language="영어,일본어"
+        genre="전략"
+        originator="익스릭스"
+        distributor="익스릭스"
+        language="한국어"
         use="12세 이용가"
+        date="2023.11.30"
 
         newinfo_txt1="모바일 최초로 Unreal Engine을 이용한 고퀄리티 3D 액션 RPG!"
         newinfo_txt2="2014년 앱스토어 인기게임 1위,구글 플레이스토어 최고 매출 1위,구글 플레이 매출 세계 4위 기록"

@@ -76,7 +76,7 @@ const Contents = () => {
     return(
         <>
         <GameInfos 
-        src="..\imgs\gameimgs\game1/game2_img01.jpg"
+        src="..\imgs\gameimgs\game2/game2_img01.jpg"
         name="귀곡팔황 (Tale of Immortal)"
 
         info_title="《귀곡팔황》은 샌드박스 스타일의 오픈월드 선협 게임입니다. 선협 체계와 산해경의 배경을 결합하여, 범인에서부터 한 걸음씩 수행하고 성장해 강자가 되는 과정을 경험하고, 산해경 속 다양한 요수들과 전투를 벌일 수 있습니다. 당신은 초심을 지키고 어려움과 맞서며, 신중한 선택으로 자신의 운명을 움켜쥘 수 있으십니까?"

@@ -1,6 +1,5 @@
-import React from "react";
-import Games from "./Games";
 import "../css/games.css";
+import Games from "./Games";
 
 const GameInfos = (props) => {
     return(
@@ -8,12 +7,15 @@ const GameInfos = (props) => {
         <div className="main_img">
             <img src={props.src} alt="thum" />
         </div>
+        <h2>{props.name}</h2>
         <div className="lower_game">
             <div className="game_info">
-                <h2 className="game_story">스토리</h2>
-                <p>{props.info_title}</p>
+                <div>
+                    <h2 className="game_story">스토리</h2>
+                    <p className="title">{props.info_title}</p>
+                </div>
                 
-
+                <div>
                 <h2 className="game_infos">게임 정보</h2>
                 <div className="game_infos">
                     <div>
@@ -22,6 +24,7 @@ const GameInfos = (props) => {
                         <p>배급사</p>
                         <p>지원언어</p>
                         <p>이용등급</p>
+                        <p>출시일</p>
                     </div>
                     <div>
                         <p>{props.genre}</p>
@@ -29,11 +32,14 @@ const GameInfos = (props) => {
                         <p>{props.distributor}</p>
                         <p>{props.language}</p>
                         <p>{props.use}</p>
+                        <p>{props.date}</p>
                     </div>
                 </div>
             </div>
+        </div>
 
             <div className="game_new_info">
+                <div>
             <h2 className="pressrelease">보도자료</h2>
                 <ul>
                     <li>
@@ -49,6 +55,7 @@ const GameInfos = (props) => {
                         <a href="#none">{props.newinfo_txt4}</a>
                     </li>
                 </ul>
+                </div>
             </div> 
 
             <div className="community">
@@ -69,17 +76,17 @@ const Contents = () => {
     return(
         <>
         <GameInfos 
-        src="../imgs/1200x800.png"
+        src="..\imgs\gameimgs\game6/game6_img01.png"
+        name="올드 월드 (Old World)"
 
-        info_title="좀비가 창궐한 조선에서, 플레이어는 각자의 목표를 위해 처절한 전투를 시작합니다.
-한국의 미를 느낄 수 있는 배경과 도전 의식을 고취시키는 특유의 난이도를 플레이 해보세요.
-강력한 패턴의 보스를 친구들과 협력해 무찌를 수도 있습니다. 깊이 있는 액션을 경험하세요."
+        info_title="Dragon Chronicles: Black Tears는 다양한 영웅들의 조합을 통해 던전을 클리어해가는 전략형 RPG입니다. 검은 눈물로 오염된 세상에서 타락한 이들에 맞서 다양한 영웅들을 전략적으로 성장시키고 활용하여 다가올 시련을 극복하세요."
 
-        genre="RPG"
-        originator="WAYCODER"
-        distributor="DAEWON MEDIA"
-        language="영어,일본어"
+        genre="전략, 시뮬레이션"
+        originator="Mohawk Games"
+        distributor="Hooded Horse"
+        language="영어, 독일어, 일본어, 한국어"
         use="12세 이용가"
+        date="2024.05.29"
 
         newinfo_txt1="모바일 최초로 Unreal Engine을 이용한 고퀄리티 3D 액션 RPG!"
         newinfo_txt2="2014년 앱스토어 인기게임 1위,구글 플레이스토어 최고 매출 1위,구글 플레이 매출 세계 4위 기록"

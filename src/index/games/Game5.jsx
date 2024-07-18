@@ -76,7 +76,7 @@ const Contents = () => {
     return(
         <>
         <GameInfos 
-        src="..\imgs\gameimgs\game1/game2_img01.jpg"
+        src="..\imgs\gameimgs\game5/game5_img01.png"
         name="드래곤 크로니클: 블랙 티어스 (Dragon Chronicles: Black Tears)"
 
         info_title="Dragon Chronicles: Black Tears는 다양한 영웅들의 조합을 통해 던전을 클리어해가는 전략형 RPG입니다. 검은 눈물로 오염된 세상에서 타락한 이들에 맞서 다양한 영웅들을 전략적으로 성장시키고 활용하여 다가올 시련을 극복하세요."
