@@ -1,4 +1,5 @@
 import "../css/games.css";
+import Communitymodal from "./Communitymodal";
 import Games from "./Games";
 
 const GameInfos = (props) => {
@@ -58,15 +59,7 @@ const GameInfos = (props) => {
                 </div>
             </div> 
 
-            <div className="community">
-                <div className="text_box">
-
-                </div>
-                <div className="text">
-                    <input type="text" placeholder="댓글을 입력하세요." />
-                    <button>등록</button>
-                </div>
-            </div>
+            <Communitymodal games="game4" />
         </div>   
     </>
         );

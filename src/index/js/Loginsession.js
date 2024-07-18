@@ -34,7 +34,7 @@ export const CheckLoginSession = () =>{
     if (!token){
         alert('로그인이 필요한 서비스입니다');
         window.location.href = "/register";
-        return;
+        return false;
     }
     else{
         try{
