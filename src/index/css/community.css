@@ -1,0 +1,132 @@
+/*modal*/
+.writemodal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.7);
+    z-index: 101;
+}
+
+.writemodal h1{
+    font-size: 2em;
+    position: relative;
+
+    bottom: 30%;
+    left: 15%;
+
+    z-index: 101;
+}
+
+.modal-main{
+    background-color: #fff;
+    width: 600px;
+    height: 500px;
+    position: relative;
+}
+
+.modal-main b{
+    float: right;
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+.modal-main b:hover{
+    cursor: pointer;
+}
+
+.modal-main input{
+    width: 90%;
+    height: 30%;
+    border: 1px solid #000;
+    position: relative;
+
+    top: 30%;
+    left: 5%;
+
+}
+.modal-main button{
+    position: relative;
+    width: 90px;
+    height: 40px;
+
+    top: 35%;
+    left: 80%;
+}
+.modal-main p{
+    color: #999;
+    position: absolute;
+
+    bottom: 30%;
+    left: 5%;
+
+
+
+}
+
+/*modal-end*/
+.community-main{
+    width: 80%;
+    height: 600px;
+
+    margin: 50px auto;
+
+    border: 1px solid #000;
+}
+
+.pop-comment{
+    width: 100%;
+    height: 200px;
+
+    border: 1px solid #000;
+}
+
+.comment-wrap{
+    width: 100%;
+    height: 150px;
+
+    border: 1px solid #000;
+}
+
+
+
+.comment-wrap{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+
+
+.comment-row-main, .comment-row-etc{
+    display: flex;
+    flex-direction: row;
+}
+.comment-row-main{
+    text-align: center;
+}
+
+.comment-row-etc{
+    height: 0.5em;
+    color: #969696;
+    text-align: left;
+    font-size: 0.8em;
+
+}
+
+.comment-row-main div, .comment-row-etc div{
+
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.comment-content, .comment-date{
+    flex: 10;
+}
+.comment-like, .comment-name{
+    flex: 1;
+}

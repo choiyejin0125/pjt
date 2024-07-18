@@ -1,0 +1,49 @@
+
+.employ-wrap{
+    max-width: 90%;
+    max-height: 90%;
+    margin: 20px auto;
+
+    border: 1px solid #000;
+}
+
+.employ-wrap h3{
+    font-size: 1.3em;
+    border-bottom: 1px solid #555;
+}
+
+ul.emp-templete{
+    width: 100%;
+    height: 10%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 0.8fr 0.8fr;
+    list-style-type: none;
+
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+ul.emp-templete:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+ul.emp-templete li{
+
+    border-right: 1px solid #000;
+}
+
+ul.emp-templete li:last-child{
+    border-right: none;
+}
+
+
+
+.employ-main{
+    margin-left: 10px;
+}
