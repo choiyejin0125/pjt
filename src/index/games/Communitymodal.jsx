@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {CheckLoginSession, tokenDecode } from "../js/Loginsession";
 import { nowDate } from "../js/util";
-import { deleteComment, getDataGameFilter, getKeyData, putData, updateComment } from "../js/CommentDB";
+import { deleteComment, getDataGameFilter, getKeyData, putData, updateComment, updateData } from "../js/CommentDB";
 import "../css/community.css";
 
 
@@ -72,9 +72,36 @@ const Textbox = (comment) =>{
         }
     }
 
+    const modifySubmitHandler = async (datekey) =>{
+        if (window.confirm('수정하시겠습니까?')){
+            const curdata = await getKeyData(datekey); // curdata(promise)
+
+            console.log('nowdata: ', curdata);
+
+            const newdata = {
+                'id': curdata.id,
+                'comment': modalChange,
+                'date': `${curdata.date} / ${nowDate('public')}에 수정됨`,
+                'recommand': curdata.recommand,
+                'commentgame': curdata.commentgame,
+            }
+
+            console.log('nowdata: ', curdata, 'newdata: ', newdata);
+            updateData(newdata);
+            await deleteComment(datekey);
+
+            alert('수정이 완료되었습니다!');
+
+            setModalChange('')
+
+            window.location.reload();
+
+        }
+    }
+
     const modifyModal = () =>{
         return(
-            <div className="comment-content"><input type="text" onChange={modalChangeHandler}/></div>
+            <div className="comment-content"><input type="text" onChange={modalChangeHandler} value={modalChange}/></div>
         );
     }
     return(
@@ -98,7 +125,7 @@ const Textbox = (comment) =>{
                             {
                                 (modifyBtnClick && editingId === data.date)
                                 ?
-                                <><button className="modify-delete" onClick={null}>submit</button><button className="modify-delete" onClick={modifyBtnClickHandler}>X</button></>
+                                <><button className="modify-delete" onClick={() => modifySubmitHandler(data.date)}>submit</button><button className="modify-delete" onClick={modifyBtnClickHandler}>X</button></>
                                 :
                                 <><button className="modify-delete" onClick={() => modifyBtnClickHandler(data.date)}>modify</button><button className="modify-delete" onClick={() => deleteHandler(data.date)}>delete</button></>
                                 

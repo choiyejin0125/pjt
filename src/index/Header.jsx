@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import  "./css/Header.css";
+import"./css/Header.css";
+
+
+
 
 
 
@@ -26,6 +29,10 @@ const Header = () => {
 
     }
 
+    const topbarClose = () =>{
+      setisTopbarOpen(false);
+    }
+
     useEffect(() =>{
       if (localStorage.getItem('token') !== null){
         setislogined(true);
@@ -40,27 +47,25 @@ const Header = () => {
       <div className="topbar">
       <div className = {`topbar ${isTopbarOpen? 'open' : ''}`}>
             <ul className="topbar-menu">
-                <li><Link to ="/">홈</Link></li>
-                <li><Link to ="/company">회사 소개</Link></li>
+                <li onClick={topbarClose}><Link to ="/"><img src="/imgs/topbar_image/home.png" className="topbar-icon" alt="home" />홈</Link></li>
+                <li onClick={topbarClose}><Link to ="/company"><img src="/imgs/topbar_image/company.png" className="topbar-icon" alt="company" />회사 소개</Link></li>
                 {
                     islogined
                     ?
                     <>
-                    <li><Link to = {null} onClick={logoutHanlder}>로그아웃</Link></li>
-                    <li><Link to = "/modify">회원정보 수정</Link></li>
+                    <li><Link to = {null} onClick={logoutHanlder}><img src="/imgs/topbar_image/logout.png" className="topbar-icon" alt="logout" />로그아웃</Link></li>
+                    <li onClick={topbarClose}><Link to = "/modify"><img src="/imgs/topbar_image/modify.png" className="topbar-icon" alt="modify" />회원정보</Link></li>
                     </>
                     :
-                    <li><Link to ="/register">로그인/회원가입</Link></li>
+                    <li onClick={topbarClose}><Link to ="/register"><img src="/imgs/topbar_image/login.png" className="topbar-icon" alt="login" />로그인</Link></li>
 
                 }
-                <li><Link to ="/games">게임</Link></li>
-                <li><Link to ="/community">커뮤니티</Link></li>
-                <li><Link to ="/employ">채용 공고</Link></li>
-                <li><Link to ="/pr">보도자료</Link></li>
+                <li onClick={topbarClose}><Link to ="/games"><img src="/imgs/topbar_image/console.png" className="topbar-icon" alt="games" />게임</Link></li>
+                <li onClick={topbarClose}><Link to ="/community"><img src="/imgs/topbar_image/community.png" className="topbar-icon" alt="games" />커뮤니티</Link></li>
             </ul>
             <div className="topbar-footer">
               <div className="logo">
-                <Link to="/"><img src="./imgs/200x70_logo.png" alt="로고 이미지" /></Link>
+                <Link to="/" onClick={topbarClose}><img src="./imgs/200x70_logo.png" alt="로고 이미지" /></Link>
               </div>
               <ul className="main_top">
                 <li>

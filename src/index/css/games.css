@@ -99,6 +99,20 @@
     cursor: pointer;
 }
 
+#game_wrap div.lower_game div.community button.modify-delete{
+    width: 30px;
+    height: 20px;
+
+    font-size: 0.8em;
+}
+
+#game_wrap div.lower_game div.community .comment-content{
+    width: 380px;
+    height: 100px;
+
+    z-index: 102;
+}
+
 /*스토리 */
 #game_wrap div.lower_game div.game_info > div {
     padding-top: 30px;
