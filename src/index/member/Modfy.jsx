@@ -4,6 +4,8 @@ import { DBconnection, getUser } from "../js/IndexedDB";
 import { Validcheck } from "./Register";
 import { useNavigate } from "react-router-dom";
 
+import "../css/modifyform.css";
+
 const getCurrentValue = async() =>{
     const getuserinfo = await getUser(tokenDecode().username);
 
@@ -84,9 +86,9 @@ const Modify = () => {
 
     return(
         <div className="modify-form">
-            Name:<input type="text" name="name" ref={uname} defaultValue={currentdata.name}/>
+            이름:<input type="text" name="name" ref={uname} defaultValue={currentdata.name}/>
             ID:<input type="text" name="id" ref={uid} defaultValue={currentdata.id} disabled/>
-            Password:<input type="text" name="pw" ref={upw} defaultValue={currentdata.pw}/>
+            비밀번호:<input type="text" name="pw" ref={upw} defaultValue={currentdata.pw}/>
             Email:<input type="text" name="email" ref={umail} defaultValue={currentdata.email}/>
             <button onClick={submitHandler}>Submit</button>
             <button onClick={deleteHandler}>Delete</button>

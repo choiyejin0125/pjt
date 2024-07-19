@@ -1,7 +1,6 @@
-import React from "react";
-import Games from "./Games";
 import "../css/games.css";
 import Communitymodal from "./Communitymodal";
+import Games from "./Games";
 
 const GameInfos = (props) => {
     return(
@@ -9,12 +8,15 @@ const GameInfos = (props) => {
         <div className="main_img">
             <img src={props.src} alt="thum" />
         </div>
+        <h2>{props.name}</h2>
         <div className="lower_game">
             <div className="game_info">
-                <h2 className="game_story">스토리</h2>
-                <p>{props.info_title}</p>
+                <div>
+                    <h2 className="game_story">스토리</h2>
+                    <p className="title">{props.info_title}</p>
+                </div>
                 
-
+                <div>
                 <h2 className="game_infos">게임 정보</h2>
                 <div className="game_infos">
                     <div>
@@ -23,6 +25,7 @@ const GameInfos = (props) => {
                         <p>배급사</p>
                         <p>지원언어</p>
                         <p>이용등급</p>
+                        <p>출시일</p>
                     </div>
                     <div>
                         <p>{props.genre}</p>
@@ -30,11 +33,14 @@ const GameInfos = (props) => {
                         <p>{props.distributor}</p>
                         <p>{props.language}</p>
                         <p>{props.use}</p>
+                        <p>{props.date}</p>
                     </div>
                 </div>
             </div>
+        </div>
 
             <div className="game_new_info">
+                <div>
             <h2 className="pressrelease">보도자료</h2>
                 <ul>
                     <li>
@@ -50,6 +56,7 @@ const GameInfos = (props) => {
                         <a href="#none">{props.newinfo_txt4}</a>
                     </li>
                 </ul>
+                </div>
             </div> 
 
             <Communitymodal games="game9" />
@@ -62,17 +69,17 @@ const Contents = () => {
     return(
         <>
         <GameInfos 
-        src="../imgs/1200x800.png"
+        src="..\imgs\gameimgs\game9/game9_img01.png"
+        name="세르케(SERKE)"
 
-        info_title="‘던전 스토커즈’는 전통적인 던전 RPG의 탐험과 탈출 서바이벌 장르의 즐거움을 경험할 수 있는 PvEvP 던전 크롤러 게임입니다. 당신은 돈, 명예, 진실을 찾기 위해 던전을 모험하는 '던전 스토커즈'가 됩니다. 각자의 이야기를 가진 스토커즈들을 선택하여 성장시키고,
-믿을 수 있는 동료들과 함께 마녀의 저주로 계속 변화하는 던전이라는 환경에 맞서 싸워야 합니다.
-던전 안에서는 다양한 몬스터와 다른 스토커즈들이 각자의 목적으로 당신의 생명을 위협할 것입니다."
+        info_title="세르케는 바이러스 침입에 대항하여 싸우는 핵 앤 슬래시 게임입니다. 5종류의 무기를 사용하여 적을 물리치고 가상 세계를 구하십시오."
 
-        genre="RPG"
-        originator="WAYCODER"
-        distributor="DAEWON MEDIA"
-        language="영어,일본어"
+        genre="액션"
+        originator="DSGAMES"
+        distributor="DSGAMES"
+        language="영어, 한국어, 일본어"
         use="12세 이용가"
+        date="2024.07.17"
 
         newinfo_txt1="모바일 최초로 Unreal Engine을 이용한 고퀄리티 3D 액션 RPG!"
         newinfo_txt2="2014년 앱스토어 인기게임 1위,구글 플레이스토어 최고 매출 1위,구글 플레이 매출 세계 4위 기록"

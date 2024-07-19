@@ -5,7 +5,7 @@
 
     font-size: 1.2em;
 
-    background-color: #bebebe;
+    background-color: #ffffff;
 
     position: fixed;
     z-index: 100;
@@ -33,7 +33,7 @@ ul.topbar-menu  li a{
 }
 
 ul.topbar-menu  li:hover{
-    background-color: #a3a3a3;
+    background-color: #ffffff;
 }
 .topbar.open{
     top: 0;
@@ -48,7 +48,7 @@ ul.topbar-menu  li:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #c4c4c443;
+    background-color: #ffffff43;
 }
 
 .topbar-footer > div.logo{

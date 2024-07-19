@@ -1,16 +1,57 @@
-
-
-div.company-wrap{
-    background-color: #555;
-    background-color: #555;
+div.company-wrap {
+    padding-top: 20px;
 }
 
+div.company-wrap div.about_us {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(70, 109, 39);
 
-div.company-container{
-    width: 1000px;
-    height: 600px;
+}
 
+div.company-wrap div.about_us h6 {
+    text-align: center;
+    line-height:200px;
+    font-size: 2.5em;
+    color: #fff;
+}
+
+div.company-wrap div.company_info {
+    width: 1300px;
     margin: 0 auto;
-    border: 1px solid #F00;
+}
 
+div.company-wrap div.company_info div.info_sum {
+    height: 230px;
+    text-align: center;
+    padding-top: 100px;
+    line-height: 40px;
+}
+div.company-wrap div.company_info div.info_sum h2 {
+    font-size: 2em;
+    font-weight: 900;
+}
+div.company-wrap div.company_info div.info_sum p {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 30px;
+    font-size: 1.1em;
+    color: #686868;
+}
+
+div.company-wrap div.company_info div.info_box {
+    width: 800px;
+    margin: 0 auto;
+}
+
+div.company-wrap div.company_info div.info_box div.info {
+    border: 1px solid #cdcdcd;
+    margin-top: 20px;
+    padding: 30px;
+}
+
+div.company-wrap div.company_info div.info_box div.info h3 {
+    font-size: 2.5em;
+    margin-right: 50px;
+    
 }
