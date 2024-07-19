@@ -53,6 +53,7 @@ const Textbox = (comment) =>{
     const [modifyBtnClick, setModifyBtnClick] = useState(false);
     const [modalChange, setModalChange] = useState('');
     const [editingId, setEditingId] = useState('')
+    const [isCommentMine, setisCommentMine] = useState({});
 
     const maxtext = 120;
 
@@ -78,10 +79,12 @@ const Textbox = (comment) =>{
 
             console.log('nowdata: ', curdata);
 
+            const originaldata = curdata.date.replace(/ \/ .*에 수정됨$/, '');
+
             const newdata = {
                 'id': curdata.id,
                 'comment': modalChange,
-                'date': `${curdata.date} / ${nowDate('public')}에 수정됨`,
+                'date': `${originaldata} / ${nowDate('public')}에 수정됨`,
                 'recommand': curdata.recommand,
                 'commentgame': curdata.commentgame,
             }
@@ -104,6 +107,16 @@ const Textbox = (comment) =>{
             <div className="comment-content"><input type="text" onChange={modalChangeHandler} value={modalChange}/></div>
         );
     }
+
+    const commentIsMine = async(curdate) =>{
+
+        const dtoken = tokenDecode();
+        
+        const authorid = await getKeyData(curdate);
+        console.log(`테스트 / commentismine? : ${dtoken.username} === ${authorid.id}`);
+        setisCommentMine(dtoken.username === authorid.id)
+    }
+
     return(
         <ul>
             {
@@ -117,18 +130,21 @@ const Textbox = (comment) =>{
                                 :
                                 <div className="comment-content">{data.comment}</div>
                             }
-                            <div className="comment-like">{data.recommand}<img src="../../../public/imgs/like.png" alt="good" onClick={() =>joayoBtnHandler(data.date)}/></div>
+                            <div className="comment-like">{data.recommand}<img src="/imgs/like.png" alt="good" onClick={() =>joayoBtnHandler(data.date)}/></div>
                         </div>
                         <div className="comment-row-etc">
                             <div className="comment-name">{data.id}</div>
                             <div className="comment-date">{data.date}</div>
                             {
+                                isCommentMine
+                                ?
                                 (modifyBtnClick && editingId === data.date)
                                 ?
                                 <><button className="modify-delete" onClick={() => modifySubmitHandler(data.date)}>submit</button><button className="modify-delete" onClick={modifyBtnClickHandler}>X</button></>
                                 :
                                 <><button className="modify-delete" onClick={() => modifyBtnClickHandler(data.date)}>modify</button><button className="modify-delete" onClick={() => deleteHandler(data.date)}>delete</button></>
-                                
+                                :
+                                '======='  
                             }
                         </div>
                     </div>

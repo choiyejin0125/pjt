@@ -11,6 +11,13 @@ button.delete-btn{
 
 }
 
+.terms{
+    width: 80%;
+    height: 400px;
+    border: 1px solid #000;
+    margin: 20px auto;
+}
+
 .terms-txt{
     width: 80%;
     height: 200px;
@@ -19,15 +26,16 @@ button.delete-btn{
 
     overflow-y: auto;
     white-space: pre-wrap;
+    margin-top: 20px;
 }
 
 .terms span{
-    width: 400px;
+    width: 100%;
     height: auto;
     text-align: left;
     display: inline-block;
     position: absolute;
-    right: 0;
+    top: 50%;
     
 }
 .repeat-pw{
@@ -37,9 +45,6 @@ button.delete-btn{
     text-align: center;
 
 }
-.repeat-pw input{
-    font-size: 20px;
-    position: relative;
-    top: 150px;
-    left: 20%;
+.repeat-pw p{
+    
 }

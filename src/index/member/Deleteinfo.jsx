@@ -58,11 +58,11 @@ const Deleteinfo = () =>{
             <b>계정 탈퇴를 위해 비밀번호 재확인이 필요합니다. 또한 다음 약관을 자세히 읽고 체크박스를 눌러주세요</b>
             <div className="terms-txt">
             {terms}
+            <span>약관을 확인하였고, 이에 동의합니다<input type="checkbox" onChange={delCheckboxHandler} /></span>
             </div>
-            <span>약관을 자세히 읽었고, 이에 동의합니다<input type="checkbox" name="" onChange={delCheckboxHandler} /></span>
         </div>
         <div className="repeat-pw">
-            <input type="password" name="delete-pwd"  placeholder="비밀번호 재확인" ref={upw}/>
+            <p>비밀번호 재확인:<input type="password" name="delete-pwd"  placeholder="비밀번호 재확인" ref={upw}/></p>
         </div>
         <button className="delete-btn" onClick={deleteBtnHandler}>계정 탈퇴</button>
         </div>

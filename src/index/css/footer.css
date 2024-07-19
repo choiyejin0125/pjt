@@ -24,11 +24,19 @@
 .advertising{
     width: 70%;
     height: 70%;
-    border: 1px solid #000;
 
     margin-top: 20px;
 
 
+}
+
+.advertising > img.advertising-main{
+    width: 80%;
+    height: 80%;
+    margin-left: 100px;
+
+    border: 3px solid #000;
+    
 }
 
 button:hover{

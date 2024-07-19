@@ -4,9 +4,15 @@ import { nowDate } from "./util";
 
 export const tokenDecode = () =>{
     const token = localStorage.getItem('token');
-    const decodetoken = jwtDecode(token);
+    if (!token === null){
+        const decodetoken = jwtDecode(token);
 
-    return decodetoken;
+        return decodetoken;
+    }
+    else{
+        console.log('token is null');
+        return null;
+    }
 
 }
 

@@ -86,12 +86,12 @@ const Modify = () => {
 
     return(
         <div className="modify-form">
-            이름:<input type="text" name="name" ref={uname} defaultValue={currentdata.name}/>
-            ID:<input type="text" name="id" ref={uid} defaultValue={currentdata.id} disabled/>
-            비밀번호:<input type="text" name="pw" ref={upw} defaultValue={currentdata.pw}/>
-            Email:<input type="text" name="email" ref={umail} defaultValue={currentdata.email}/>
-            <button onClick={submitHandler}>Submit</button>
-            <button onClick={deleteHandler}>Delete</button>
+            <h1>회원 정보 수정</h1>
+            <p>이름:<input type="text" name="name" ref={uname} defaultValue={currentdata.name}/></p>
+            <p>ID:<input type="text" name="id" ref={uid} defaultValue={currentdata.id} disabled/></p>
+            <p>비밀번호:<input type="text" name="pw" ref={upw} defaultValue={currentdata.pw}/></p>
+            <p>Email:<input type="text" name="email" ref={umail} defaultValue={currentdata.email}/></p>
+            <button onClick={submitHandler}>Submit</button> <button onClick={deleteHandler}>Delete</button>
         </div>
     );
 }

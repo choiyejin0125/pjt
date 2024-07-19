@@ -9,7 +9,6 @@ import Company from "./company/Company";
 import Employ from "./employ/Employ";
 import Games from "./games/Games";
 import Register from "./member/Register.jsx";
-import Pr from "./Pr.jsx";
 import NG from "./NG.jsx";
 
 import Game1 from "./games/Game1";
@@ -56,7 +55,6 @@ const Wrap = () => {
       <Routes>
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path="/company" element={<Layout><Company /></Layout>} />
-        <Route path="/pr" element={<Layout><Pr /></Layout>} />
         <Route path="/register" element={<Layout><Register /></Layout>} />
         <Route path="/community" element={<Layout><Community /></Layout>} />
         <Route path="/games/*" element={<Layout><Games /></Layout>} />

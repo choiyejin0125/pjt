@@ -65,11 +65,11 @@ const Header = () => {
             </ul>
             <div className="topbar-footer">
               <div className="logo">
-                <Link to="/" onClick={topbarClose}><img src="./imgs/200x70_logo.png" alt="로고 이미지" /></Link>
+                <Link to="/" onClick={topbarClose}><img src="/imgs/200x70_logo.png" alt="로고 이미지" /></Link>
               </div>
               <ul className="main_top">
                 <li>
-                  <Link to="" onClick={menuClickHandler}><img src="./imgs/menubtn.png" alt="아이콘 이미지" /></Link>
+                  <Link to="" onClick={menuClickHandler}><img src="/imgs/menubtn.png" alt="아이콘 이미지" /></Link>
                 </li>
                 {
                   islogined

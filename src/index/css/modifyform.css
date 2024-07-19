@@ -1,3 +1,15 @@
 .modify-form {
-    font-size: 2em;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    row-gap: 30px;
+
 }
+
+.modify-form input{
+    width: 50%;
+    height: 100%;
+}
+
+
+

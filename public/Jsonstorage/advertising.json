@@ -1,0 +1,18 @@
+{
+    "ads":[
+        {
+            "name": "MinigameHeaven",
+            "url": "/imgs/adfile/ad1.png"
+        },
+        {
+            "name": "FakeGame",
+            "url": "/imgs/adfile/ad2.png"
+        },
+        {
+            "name": "NCsoft",
+            "url": "/imgs/adfile/ad3.png"
+        }
+        
+        
+    ]
+}
