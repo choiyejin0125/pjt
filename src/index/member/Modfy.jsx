@@ -91,7 +91,9 @@ const Modify = () => {
             <p>ID:<input type="text" name="id" ref={uid} defaultValue={currentdata.id} disabled/></p>
             <p>비밀번호:<input type="text" name="pw" ref={upw} defaultValue={currentdata.pw}/></p>
             <p>Email:<input type="text" name="email" ref={umail} defaultValue={currentdata.email}/></p>
+            <div className="modify-button">
             <button onClick={submitHandler}>Submit</button> <button onClick={deleteHandler}>Delete</button>
+            </div>
         </div>
     );
 }

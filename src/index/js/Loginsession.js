@@ -3,16 +3,19 @@ import { nowDate } from "./util";
 
 
 export const tokenDecode = () =>{
+
     const token = localStorage.getItem('token');
-    if (!token === null){
+
+    if (token !== null){
+        console.log("로그인 상태가 아닐때는 이게 나오면 안됨");
         const decodetoken = jwtDecode(token);
 
         return decodetoken;
     }
     else{
-        console.log('token is null');
         return null;
     }
+
 
 }
 

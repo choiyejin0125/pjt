@@ -36,7 +36,7 @@ const Footer = () => {
         <div className="footer">
         <div className="info-copyright">
             <div className="info-text">
-            <span>(주)name 대표: 대표이름</span>
+            <span>(주)액션스퀘어 대표: 가나다</span>
             <span>서울특별시 강남구 테헤란로 123 디지털타워 15층</span>
             <span>사업자등록번호: 123-86-45678</span>
             &nbsp;&nbsp;

@@ -61,7 +61,6 @@ const Header = () => {
 
                 }
                 <li onClick={topbarClose}><Link to ="/games"><img src="/imgs/topbar_image/console.png" className="topbar-icon" alt="games" />게임</Link></li>
-                <li onClick={topbarClose}><Link to ="/community"><img src="/imgs/topbar_image/community.png" className="topbar-icon" alt="games" />커뮤니티</Link></li>
             </ul>
             <div className="topbar-footer">
               <div className="logo">

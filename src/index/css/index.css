@@ -38,6 +38,7 @@
 
 #wrap div.content_1 {
     margin: auto;
+
 }
 
 #wrap div.content_1 > h2 {
@@ -64,6 +65,25 @@
     float: left;
     
 }
+
+
+#wrap div.content_1 > div.arrows{
+    width: fit-content;
+    height: fit-content;
+
+    display: flex;
+
+
+
+    margin: 0 auto;
+    gap: 50px;
+}
+
+#wrap div.content_1 > div.arrows :hover{
+    cursor: pointer;
+}
+
+
 
 /* content_1 end*/
 

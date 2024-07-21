@@ -1,15 +1,29 @@
 .modify-form {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 
     row-gap: 30px;
 
 }
 
-.modify-form input{
-    width: 50%;
-    height: 100%;
+.modify-form p{
+    border-bottom: 1px solid #ccc;
 }
+
+.modify-form input{
+
+    width: 90%;
+    height: 50px;
+
+}
+.modify-form > .modify-button{
+    width: 100%;
+    height: 100px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 
 
 

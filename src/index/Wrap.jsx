@@ -4,9 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import Home from "./Home";
-import Community from "./community/Community";
 import Company from "./company/Company";
-import Employ from "./employ/Employ";
 import Games from "./games/Games";
 import Register from "./member/Register.jsx";
 import NG from "./NG.jsx";
@@ -56,7 +54,6 @@ const Wrap = () => {
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path="/company" element={<Layout><Company /></Layout>} />
         <Route path="/register" element={<Layout><Register /></Layout>} />
-        <Route path="/community" element={<Layout><Community /></Layout>} />
         <Route path="/games/*" element={<Layout><Games /></Layout>} />
         <Route path="/games/game1" element={<Layout><Game1 /></Layout>} />
         <Route path="/games/game2" element={<Layout><Game2 /></Layout>} />
@@ -78,7 +75,6 @@ const Wrap = () => {
         <Route path="/games/game18" element={<Layout><Game18 /></Layout>} />
         <Route path="/games/game19" element={<Layout><Game19 /></Layout>} />
         <Route path="/games/game20" element={<Layout><Game20 /></Layout>} />
-        <Route path="/employ" element={<Layout><Employ /></Layout>} />
         <Route path="/modify" element={<Layout><Modify /></Layout>} />
         <Route path="/deleteinfo" element={<Layout><Deleteinfo /></Layout>} />
         <Route path="/terms" element={<Layout><TermsAndConditions/></Layout>} /> 

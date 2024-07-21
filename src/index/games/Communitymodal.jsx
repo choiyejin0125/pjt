@@ -53,7 +53,6 @@ const Textbox = (comment) =>{
     const [modifyBtnClick, setModifyBtnClick] = useState(false);
     const [modalChange, setModalChange] = useState('');
     const [editingId, setEditingId] = useState('')
-    const [isCommentMine, setisCommentMine] = useState({});
 
     const maxtext = 120;
 
@@ -75,6 +74,10 @@ const Textbox = (comment) =>{
 
     const modifySubmitHandler = async (datekey) =>{
         if (window.confirm('수정하시겠습니까?')){
+            if (modalChange === ''){
+                alert('댓글이 없습니다');
+                return;
+            }
             const curdata = await getKeyData(datekey); // curdata(promise)
 
             console.log('nowdata: ', curdata);
@@ -108,13 +111,16 @@ const Textbox = (comment) =>{
         );
     }
 
-    const commentIsMine = async(curdate) =>{
+    const tokenid = () =>{
+        const decodetoken = tokenDecode()
 
-        const dtoken = tokenDecode();
-        
-        const authorid = await getKeyData(curdate);
-        console.log(`테스트 / commentismine? : ${dtoken.username} === ${authorid.id}`);
-        setisCommentMine(dtoken.username === authorid.id)
+        if (decodetoken === null){
+            return '';
+        }
+        else{
+            console.log("토큰(아이디):",decodetoken.username)
+            return decodetoken.username;
+        }
     }
 
     return(
@@ -136,7 +142,7 @@ const Textbox = (comment) =>{
                             <div className="comment-name">{data.id}</div>
                             <div className="comment-date">{data.date}</div>
                             {
-                                isCommentMine
+                                (data.id === tokenid())
                                 ?
                                 (modifyBtnClick && editingId === data.date)
                                 ?
@@ -202,11 +208,74 @@ const Communitymodal = (games) =>{
         }  
     }
 
+    const sortDate = (a, b) => {
+        let sortdateA = ""
+        let sortdateB = ""
+        if (a.date.split('/')[1] !== undefined){
+            sortdateA = a.date.split('/')[1];
+        }
+        else{
+            sortdateA = a.date.split('/')[0];
+        }
+        if (b.date.split('/')[1] !== undefined){
+            sortdateB = b.date.split('/')[1];
+        }
+        else{
+            sortdateB = b.date.split('/')[0];
+        }
+
+        const numericDateA = parseInt(sortdateA.replace(/\D/g, ''));
+        const numericDateB = parseInt(sortdateB.replace(/\D/g, ''));
+
+        return {numericDateA, numericDateB};
+    }
+
+    const sortChangeHandler = async (e) =>{
+        const newsortvalue = e.target.value;
+        let sortdata;
+        const data = await getDataGameFilter(games);
+
+        switch (newsortvalue){
+            case "good":
+                sortdata = data.sort((a, b) => b.recommand - a.recommand);
+                break;
+            case "new":
+                sortdata = data.sort((a, b) => {
+
+                    const {numericDateA, numericDateB} = sortDate(a, b);
+
+
+                    console.log("테스트(sortdata): ", numericDateA, numericDateB);
+                    return numericDateB - numericDateA;
+                });
+                break;
+            case "old":
+                sortdata = data.sort((a, b) => {
+
+                    const {numericDateA, numericDateB} = sortDate(a, b);
+
+                    console.log("테스트(sortdata): ", numericDateA, numericDateB);
+                    return numericDateA - numericDateB;
+                });
+                break;
+            case "mine":
+                const curuser = tokenDecode().username;
+                sortdata = data.filter(comment => comment.id === curuser);
+                break;
+            default:
+                throw new Error("잘못된 sortvalue");
+        }
+        console.log('데이터 체크:', data);
+        setdataarray(sortdata);
+    }
+    
     const fetchcomment = async () =>{
         const data = await getDataGameFilter(games);
         setdataarray(data);
-        console.log('데이터 불러오기 성공');
+        console.log('데이터 불러오기 성공: ', data);
+
     }
+    
 
     useEffect(() =>{
         fetchcomment();
@@ -222,7 +291,22 @@ const Communitymodal = (games) =>{
             </div>
             <div className="text">
                 <input type="text" placeholder="댓글을 입력하세요." onChange={textboxChangeHandler} value={textstate}/>
-                <button onClick={textSubmitHandler}>등록</button> <p>{textstate.length}/{maxtext} 자</p>
+                <button onClick={textSubmitHandler}>등록</button> 
+                <div className="length-select">
+                {textstate.length}/{maxtext} 자
+                <select className="sort" onChange={sortChangeHandler}>
+                    <option value="good">좋아요</option>
+                    <option value="new">최신</option>
+                    <option value="old">오래된</option>
+                    {
+                        tokenDecode() !== null
+                        ?
+                        <option value="mine">나의 댓글</option>
+                        :
+                        null
+                    }
+                </select>
+                </div>
             </div>
         </div>
     );
