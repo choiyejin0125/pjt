@@ -25,10 +25,6 @@ import Game13 from "./games/Game13";
 import Game14 from "./games/Game14";
 import Game15 from "./games/Game15";
 import Game16 from "./games/Game16";
-import Game17 from "./games/Game17";
-import Game18 from "./games/Game18";
-import Game19 from "./games/Game19";
-import Game20 from "./games/Game20";
 
 import './css/index.css';
 import './css/common.css';
@@ -71,10 +67,6 @@ const Wrap = () => {
         <Route path="/games/game14" element={<Layout><Game14 /></Layout>} />
         <Route path="/games/game15" element={<Layout><Game15 /></Layout>} />
         <Route path="/games/game16" element={<Layout><Game16 /></Layout>} />
-        <Route path="/games/game17" element={<Layout><Game17 /></Layout>} />
-        <Route path="/games/game18" element={<Layout><Game18 /></Layout>} />
-        <Route path="/games/game19" element={<Layout><Game19 /></Layout>} />
-        <Route path="/games/game20" element={<Layout><Game20 /></Layout>} />
         <Route path="/modify" element={<Layout><Modify /></Layout>} />
         <Route path="/deleteinfo" element={<Layout><Deleteinfo /></Layout>} />
         <Route path="/terms" element={<Layout><TermsAndConditions/></Layout>} /> 

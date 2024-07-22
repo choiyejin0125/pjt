@@ -34,19 +34,19 @@ const Shelf1 = () =>{
             <Li 
             src="./imgs/320x400_thum1.png"
             alt="Game Thumbnail"
-            txt="Blade:Re.Action"
+            txt="Remedium"
             propstxt="game1"
             />
             <Li 
             src="./imgs/320x400_thum2.png"
             alt="Game Thumbnail"
-            txt="BLADE"
+            txt="Tale Of Immortal"
             propstxt="game2"
             />
             <Li 
             src="./imgs/320x400_thum3.png"
             alt="Game Thumbnail"
-            txt="Blades of Three Kingdoms"
+            txt="GENSEISUIKODEN PLUS"
             propstxt="game3"
             />
         </ul>
@@ -58,19 +58,19 @@ const Shelf2 = () =>{
             <Li 
             src="./imgs/320x400_thum4.png"
             alt="Game Thumbnail"
-            txt="BLADE 2"
+            txt="God Of Weapons"
             propstxt="game4"
             />
             <Li 
             src="./imgs/320x400_thum5.png"
             alt="Game Thumbnail"
-            txt="ANVIL"
+            txt="Dragon Chronicles: Black Tears"
             propstxt="game5"
             />
             <Li 
             src="./imgs/320x400_thum6.png"
             alt="Game Thumbnail"
-            txt="DUNGEON STALKERS"
+            txt="OldWorld"
             propstxt="game6"
             />
         </ul>
@@ -80,21 +80,21 @@ const Shelf3 = () =>{
     return(
         <ul className="gameshelf3">
             <Li 
-            src="./imgs/320x400_thum1.png"
+            src="./imgs/320x400_thum7.png"
             alt="Game Thumbnail"
-            txt="Blade:Re.Action"
+            txt="Knight Overloaded"
             propstxt="game7"
             />
             <Li 
-            src="./imgs/320x400_thum2.png"
+            src="./imgs/320x400_thum8.png"
             alt="Game Thumbnail"
-            txt="BLADE"
+            txt="Space Pressure 3D: Prelude"
             propstxt="game8"
             />
             <Li 
-            src="./imgs/320x400_thum3.png"
+            src="./imgs/320x400_thum9.png"
             alt="Game Thumbnail"
-            txt="Blades of Three Kingdoms"
+            txt="ELDEN BLING"
             propstxt="game9"
             />
         </ul>
@@ -104,21 +104,21 @@ const Shelf4 = () =>{
     return(
         <ul className="gameshelf4">
             <Li 
-            src="./imgs/320x400_thum4.png"
+            src="./imgs/320x400_thum10.png"
             alt="Game Thumbnail"
-            txt="BLADE 2"
+            txt="Lotus Lantern: Rescue Mother"
             propstxt="game10"
             />
             <Li 
-            src="./imgs/320x400_thum5.png"
+            src="./imgs/320x400_thum11.png"
             alt="Game Thumbnail"
-            txt="ANVIL"
+            txt="Metro Simulator 2"
             propstxt="game11"
             />
             <Li 
-            src="./imgs/320x400_thum6.png"
+            src="./imgs/320x400_thum12.png"
             alt="Game Thumbnail"
-            txt="DUNGEON STALKERS"
+            txt="Shambles"
             propstxt="game12"
             />
         </ul>
@@ -128,21 +128,21 @@ const Shelf5 = () =>{
     return(
         <ul className="gameshelf5">
             <Li 
-            src="./imgs/320x400_thum1.png"
+            src="./imgs/320x400_thum13.png"
             alt="Game Thumbnail"
-            txt="Blade:Re.Action"
+            txt="The Bridge Curse Road to Salvation"
             propstxt="game13"
             />
             <Li 
-            src="./imgs/320x400_thum2.png"
+            src="./imgs/320x400_thum14.png"
             alt="Game Thumbnail"
-            txt="BLADE"
+            txt="Help the Cats Demo"
             propstxt="game14"
             />
             <Li 
-            src="./imgs/320x400_thum3.png"
+            src="./imgs/320x400_thum15.png"
             alt="Game Thumbnail"
-            txt="Blades of Three Kingdoms"
+            txt="Caravan Sandwitch"
             propstxt="game15"
             />
         </ul>
@@ -152,40 +152,10 @@ const Shelf6 = () =>{
     return(
         <ul className="gameshelf6">
             <Li 
-            src="./imgs/320x400_thum4.png"
+            src="./imgs/320x400_thum16.png"
             alt="Game Thumbnail"
-            txt="BLADE 2"
+            txt="Etherborn"
             propstxt="game16"
-            />
-            <Li 
-            src="./imgs/320x400_thum5.png"
-            alt="Game Thumbnail"
-            txt="ANVIL"
-            propstxt="game17"
-            />
-            <Li 
-            src="./imgs/320x400_thum6.png"
-            alt="Game Thumbnail"
-            txt="DUNGEON STALKERS"
-            propstxt="game18"
-            />
-        </ul>
-    );
-}
-const Shelf7 = () =>{
-    return(
-        <ul className="gameshelf7">
-            <Li 
-            src="./imgs/320x400_thum4.png"
-            alt="Game Thumbnail"
-            txt="BLADE 2"
-            propstxt="game19"
-            />
-            <Li 
-            src="./imgs/320x400_thum5.png"
-            alt="Game Thumbnail"
-            txt="ANVIL"
-            propstxt="game20"
             />
         </ul>
     );
@@ -200,7 +170,6 @@ const Gameshelf = ({number}) =>{
         4: Shelf4 ,
         5: Shelf5 ,
         6: Shelf6 ,
-        7: Shelf7 ,
     }
 
     const CurrentShelf = Shelves[number];
@@ -213,7 +182,7 @@ const Gameshelf = ({number}) =>{
 const Ul = () => {
     const [shelfopen, setshelfopen] = useState(1);
 
-    const shelvestotal = 7;
+    const shelvestotal = 6;
 
     const prevShelf = () =>{
         setshelfopen(prev => prev > 1 ? prev - 1 : shelvestotal);

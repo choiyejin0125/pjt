@@ -46,14 +46,6 @@ const Games = () => {
             <div><Link to="/games/game15">여귀교</Link></div>
             
             <div><Link to="/games/game16">헬프더캣츠 Demo</Link></div>
-            
-            <div><Link to="/games/game17">카라반 샌드위치</Link></div>
-            
-            <div><Link to="/games/game18">이더본</Link></div>
-            
-            <div><Link to="/games/game19">슬립스트림</Link></div>
-           
-            <div><Link to="/games/game20">RPG 메이커 MZ</Link></div>
             </div>
         </div>
         </nav>

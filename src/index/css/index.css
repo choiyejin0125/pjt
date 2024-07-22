@@ -6,7 +6,7 @@
 
 /* main start*/
 
-#wrap div.main div.banner img {
+#wrap div.main div.bannerwrap img {
     max-width: 100%;
 }
 #wrap div.main {
@@ -15,20 +15,17 @@
     position: relative;
 }
 
-
-#wrap div.main div.arrow {
-    position: absolute;
-    bottom: 40px;
-    right: 20px;
-
-
-}
-#wrap div.main div.arrow div{
-    float: left;
-    margin: 0 20px;
-    
+#wrap div.main > div.bannerwrap > div.banner{
+    transition: opacity 0.5s ease-in-out;
 }
 
+.fade-in{
+    opacity: 1;
+}
+
+.fade-out{
+    opacity: 0;
+}
 
 
 /* main and*/
@@ -55,7 +52,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #wrap div.content_1 ul li {
@@ -64,6 +61,11 @@
     margin: 0 50px 50px 50px;
     float: left;
     
+}
+
+#wrap div.content_1 ul img{
+    width: 320px;
+    height: 400px;
 }
 
 
@@ -82,7 +84,6 @@
 #wrap div.content_1 > div.arrows :hover{
     cursor: pointer;
 }
-
 
 
 /* content_1 end*/
